@@ -1,0 +1,131 @@
+// Place all the styles related to the MyCsvs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.csvName {
+  text-align: center;
+  font-weight: normal;
+}
+
+.back {
+  text-decoration: none;
+  color: darkgray;
+  letter-spacing: 0.1em;
+  font-size: medium;
+  :link {
+    color: darkgray;
+  }
+  :visited {
+    color: darkgray;
+  }
+  :hover {
+    color: grey;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.books {
+  width: 60%;
+  max-height: 60vh;
+  overflow-y: scroll;
+  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.3);
+
+  th {
+    color: #7c8080;
+    font-weight: lighter;
+    padding: 1%;
+    font-size: large;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+
+  td {
+    padding: 0.5%;
+    text-align: center;
+    font-size: medium;
+    border-bottom: 0.5px solid #e0e0e0;
+  }
+}
+
+form {
+  width: 70%;
+}
+
+.upload_wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+
+}
+
+.btnUpload {
+  color: #494949 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 1%;
+  border: 4px solid #494949 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.upload_wrapper .csvFile {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.submitCsv {
+  color: #494949 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 1%;
+  border: 4px solid #494949 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  margin-left: 2%;
+  cursor: pointer;
+}
+
+.formCsv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.csvList {
+  width: 20%;
+  max-height: 60vh;
+  overflow-y: scroll;
+
+  th {
+    color: #7c8080;
+    font-weight: lighter;
+    padding: 1%;
+    font-size: large;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+
+  td {
+    padding: 0.5%;
+    text-align: center;
+    font-size: medium;
+    border-bottom: 0.5px solid #e0e0e0;
+  }
+}
+

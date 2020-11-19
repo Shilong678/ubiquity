@@ -1,0 +1,20 @@
+
+= form_with class: 'formCsv', model: MyCsv.new do |f|
+  .upload_wrapper  
+    %button.btnUpload Choose CSV
+    = f.file_field :file, accept: '.csv', class: 'csvFile'
+  %br
+  = f.submit "Upload", disable_with: 'Creating...', class: 'submitCsv'
+
+
+
+
+%table.csvList
+  %thead
+    %tr
+      %th CSV
+  %tbody
+    - current_user.my_csvs.all.each do |csv|
+      %tr
+        %td= link_to(csv.file.filename, csv)
+         

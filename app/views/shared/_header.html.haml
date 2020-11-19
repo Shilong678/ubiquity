@@ -1,0 +1,6 @@
+.header
+    -if user_signed_in? 
+        %span.nav= "Hi #{current_user.email}"
+        .nav= link_to('Logout', destroy_user_session_path, method: :delete)    
+    -else     
+        .nav= link_to('Login', new_user_session_path)

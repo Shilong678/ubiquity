@@ -1,0 +1,25 @@
+
+
+
+.back= link_to('Back', new_my_csv_path)
+
+%h3.csvName= @csv.file.filename     
+
+.container
+    %table.books
+        %thead
+            %tr
+            %th Title
+            %th Author
+            %th Released
+            %th ISBN
+            %th Publisher
+        %tbody
+        - @csv.books.each do |book|
+            %tr
+                %td= book.title
+                %td= book.author
+                %td= book.date
+                %td= book.isbn
+                %td= book.publisher
+
